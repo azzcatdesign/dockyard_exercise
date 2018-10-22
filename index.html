@@ -1,0 +1,123 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Code Challenge</title>
+  <meta name="author" content="Catherine Azzarello">
+  <meta name="description" content="DockYard UX Developer exercise">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Proza+Libre:400,600" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" class="visually-hidden">
+    <symbol id="icon-facebook" viewBox="0 0 20 20">
+      <title>Market on Facebook</title>
+      <g class="icon">
+        <path d="M18.897 0H1.103C.494 0 0 .494 0 1.103v17.794C0 19.507.494 20 1.103 20h9.579v-7.745H8.074V9.237h2.608V7.009c0-2.582 1.578-3.987 3.882-3.987 1.104 0 2.053.08 2.33.117v2.7h-1.6c-1.25 0-1.494.601-1.494 1.476V9.24h2.987l-.388 3.025H13.8V20h5.096c.61 0 1.104-.493 1.104-1.103V1.103C20 .494 19.507 0 18.897 0"/>
+      </g>
+    </symbol>
+    <symbol id="icon-twitter" viewBox="0 0 20 17">
+      <title>Market on Twitter</title>
+      <g class="icon">
+        <path d="M19.96 2.024a8.05 8.05 0 0 1-2.353.676A4.293 4.293 0 0 0 19.409.327a8.245 8.245 0 0 1-2.606 1.032A4.002 4.002 0 0 0 13.811 0c-2.264 0-4.1 1.92-4.1 4.285 0 .34.038.667.106.98-3.408-.169-6.429-1.88-8.45-4.468a4.35 4.35 0 0 0-.555 2.157c0 1.49.725 2.8 1.823 3.57a3.952 3.952 0 0 1-1.857-.537v.053c0 2.079 1.411 3.812 3.288 4.207a3.992 3.992 0 0 1-1.843.074c.526 1.702 2.038 2.943 3.837 2.978A7.997 7.997 0 0 1 0 15.075C1.824 16.29 3.973 17 6.297 17c7.545 0 11.666-6.533 11.666-12.189 0-.182 0-.366-.013-.549A8.5 8.5 0 0 0 20 2.042l-.04-.018z"/>
+      </g>
+    </symbol>
+  </svg>
+
+
+  <div id="container">
+
+    <header id="page-header" class="page-header">
+      <div class="store-logo">Market</div>
+    </header>
+
+    <div class="product grid">
+      <header class="product__header grid-item">
+        <h2 class="product__origin h5">1956 Germany</h2>
+        <h1 class="product__name">Ikoflex Camera</h1>
+      </header>
+      <div class="product__image-wrap grid-item">
+        <img src="images/ikoflexsmall.jpg" srcset="images/icoflexmed.jpg 600w, images/ikoflexlarge.jpg 1000w" alt="front view of Ikoflex camera" />
+      </div>
+      <div class="product__description-wrap grid-item">
+        <p>The waist-level viewing hood opens and closes in a single action. The image from the taking lens is reflected by a mirror onto a ground glass screen. This model has a foldable magnifying-glass under the hood, and an eye-level sportsfinder.</p>
+        <footer>
+          <div class="links">
+            <p class="more">
+              <a class="more" href="/">Learn More</a>
+            </p>
+            <ul class="social-links">
+              <li class="social-links__list-item">
+                <a class="facebook" href="/">
+                  <svg class="icon icon-alone">
+                    <use xlink:href="#icon-facebook" />
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links__list-item">
+                <a class="twitter" href="/">
+                  <svg class="icon icon-alone">
+                    <use xlink:href="#icon-twitter" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <hr class="links__rule">
+          <div class="product__cta">
+            <p class="product__price">$165</p>
+            <button class="button button--primary">Add to Cart</button>
+          </div>
+        </footer>
+      </div>
+    </div><!-- /product-->
+
+    <div class="product grid">
+      <header class="product__header grid-item">
+        <h2 class="product__origin h5">1920 United States</h2>
+        <h1 class="product__name">Singer 27</h1>
+      </header>
+      <div class="product__image-wrap grid-item">
+        <img src="images/singersmall.jpg" srcset="images/singerlexmed.jpg 600w, images/singerlarge.jpg 1000w" alt="3/4 front view of antique sewing machine" />
+      </div>
+      <div class="product__description-wrap grid-item">
+        <p>The 27 series was singer's first use of a vibrating shuttle as a bobbin driver, instead of the transverse shuttle used in the older 	&lsquo;New Family' machine.</p>
+        <footer>
+          <div class="links">
+            <p class="more">
+              <a class="more" href="/">Learn More</a>
+            </p>
+            <ul class="social-links">
+              <li class="social-links__list-item">
+                <a class="facebook" href="/">
+                  <svg class="icon icon-alone">
+                    <use xlink:href="#icon-facebook" />
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links__list-item">
+                <a class="twitter" href="/">
+                  <svg class="icon icon-alone">
+                    <use xlink:href="#icon-twitter" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <hr class="links__rule">
+          <div class="product__cta">
+            <p class="product__price">$250</p>
+            <button class="button button--primary">Add to Cart</button>
+          </div>
+        </footer>
+      </div>
+    </div><!-- /product-->
+
+  </div>
+  <!-- <script src="js/scripts.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,283 @@
+@charset "UTF-8";
+/* Minimal reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px; }
+
+*, *:before, *:after {
+  background: transparent;
+  border: 0;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* Font Face Declarations */
+@font-face {
+  font-family: "system";
+  font-style: normal;
+  font-weight: 400;
+  src: local(".SFNSText-Regular"), local(".HelveticaNeueDeskInterface-Regular"), local(".LucidaGrandeUI"), local("Segoe UI"), local("Ubuntu"), local("Roboto-Regular"), local("DroidSans"), local("Tahoma"); }
+
+/* @font-face {
+  font-family: "Cormorant Garamond";
+  src: url("fonts/CormorantGaramond-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Proza Libre";
+  src: url("fonts/ProzaLibre-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+*/
+/* Variables */
+:root {
+  /* Color Variables */
+  /* neutrals, light to dark */
+  --white: hsla(0, 0%, 100%, 1);
+  --warm-light-grey: hsla(60, 2%, 81%, 1);
+  --warm-light-grey: #CFCFCB;
+  --warm-med-grey: hsla(60, 3%, 46%, 1);
+  --warm-med-grey: #767673;
+  --secondary-text-color:  hsla(285, 0%, 29%, 1);
+  --secondary-text-color: #4A4A4A;
+  --dark-grey: hsla(0, 0%, 36%, 1);
+  --dark-grey: #5B5B5B;
+  --black: hsla(0, 0%, 0%, 1);
+  /* brand colors, light to dark */
+  --main-background-color: hsla(60, 2%, 93%, 1);
+  --main-background-color: #EDEDE8;
+  --primary-color-tint: hsla(83, 6%, 87%, 1);
+  --primary-color-tint: #DADFD2;
+  --primary-color: hsla(158, 82%, 43%, 1);
+  --primary-color: #146E4D;
+  /* forest-green */
+  --primary-color-shade: hsla(158, 86%, 33%, 1);
+  --primary-color-shade: #146E4D;
+  /* derived colors, alphabetical*/
+  --body-text-color: var(--dark-grey);
+  --button-background-color: var(--primary-color-tint);
+  --button-hover-background-color: var(--primary-color);
+  --button-text-color: var(--primary-color);
+  --dotted-rule-color: var(--secondary-text-color);
+  --head-text-color: var(--black);
+  --horizontal-rule-color: var(--warm-light-grey);
+  --icon-color: var(--warm-med-grey);
+  --icon-hover-color: var(--dark-grey);
+  --item-price-color: var(--secondary-text-color);
+  --link-color: var(--primary-color);
+  --link-hover-color: var(--primary-color-shade);
+  --text-reverse-color: var(--white);
+  /* Font Variables */
+  --font-size: 16px;
+  --letter-spacing: 2px;
+  --sans-serif: "Proza Libre", "system", sans-serif;
+  --serif: "Cormorant Garamond", Garamond, "Apple Garamond", "Palatino Linotype", Palatino, Book Antiqua, Georgia, serif;
+  --body-font: var(--sans-serif);
+  --head-font: var(--serif); }
+
+/* Typography */
+/* Scale derived, using custom value of 1.225. http://type-scale.com/?size=16&scale=1.225&text=A%20Visual%20Type%20Scale&webfont=Cormorant%20Garamond&font-family=font-family:%20%27Cormorant%20Garamond%27,%20serif;&font-weight=300&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=#333*/
+/* Scale derived, using custom value of 1.37. See:  http://type-scale.com/?size=16&scale=1.37&text=Ikoflex%20Camera&webfont=Cormorant%20Garamond&font-family=font-family:%20%27Cormorant%20Garamond%27,%20serif;&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=#333 */
+body {
+  background-color: var(--white);
+  color: var(--body-text-color);
+  font-family: var(--body-font);
+  font-weight: 400;
+  line-height: 1.875;
+  -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+  color: var(--head-text-color);
+  font-family: var(--head-font);
+  font-weight: inherit;
+  line-height: 1.2;
+  margin: 1.414em 0 0.5em; }
+
+h5, h6,
+.h5, .h6 {
+  color: inherit;
+  font-family: var(--body-font);
+  font-weight: 600; }
+
+h1, .h1 {
+  margin-top: 0;
+  font-size: 2.252rem; }
+
+@media (min-width: 1024px) {
+  h1, .h1 {
+    font-size: 3.523rem; } }
+
+h2, .h2 {
+  font-size: 1.838rem; }
+
+@media (min-width: 1024px) {
+  h2, .h2 {
+    font-size: 2.571rem; } }
+
+h3, .h3 {
+  font-size: 1.501rem; }
+
+@media (min-width: 1024px) {
+  h3, .h3 {
+    font-size: 1.877rem; } }
+
+h4, .h4 {
+  font-size: 1.225rem; }
+
+@media (min-width: 1024px) {
+  h4, .h4 {
+    font-size: 1.37rem; } }
+
+h5, .h5 {
+  font-size: .875rem;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase; }
+
+h6, .h6 {
+  font-size: 0.875rem;
+  letter-spacing: var(--letter-spacing); }
+
+p {
+  margin-bottom: 1.3em; }
+
+small {
+  font-size: 0.875rem; }
+
+a {
+  color: var(--link-color);
+  text-decoration: none; }
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: none; }
+
+::selection {
+  background: var(--primary-color);
+  color: var(--white); }
+
+/* Components */
+button {
+  background-color: var(--button-background-color);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--button-text-color);
+  color: #146E4D;
+  cursor: pointer;
+  font-family: var(--body-font);
+  font-size: .875rem;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  padding: 1rem 1.5rem .875rem;
+  text-transform: uppercase; }
+
+button:hover {
+  background-color: var(--button-hover-background-color);
+  color: var(--white); }
+
+/* General */
+* {
+  scroll-behavior: smooth;
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1); }
+
+/* Layout */
+/* This fixes the space at top of body */
+.visually-hidden {
+  display: none; }
+
+#container {
+  background-color: var(--main-background-color);
+  border: 0.5rem solid var(--white);
+  padding: 1rem; }
+
+@media (min-width: 1024px) {
+  #container {
+    border-width: 1.125rem; } }
+
+.page-header {
+  padding: 1rem 0 2rem; }
+
+.store-logo {
+  background: transparent url(images/market-logo.svg) no-repeat center center;
+  background-size: contain;
+  display: block;
+  height: 1.125rem;
+  text-indent: -9999px; }
+
+.product {
+  border-bottom: 1px solid var(--horizontal-rule-color);
+  padding: 1.5rem 0; }
+
+.product__origin.h5 {
+  margin-top: 0; }
+
+.product__image-wrap img {
+  display: block;
+  margin-bottom: 2rem; }
+
+a.more:after {
+  content: '→';
+  display: inline-block;
+  margin-left: .5em; }
+
+.social-links {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  /* Visually align facebook icon on left,
+  follow mockup for spacing between elements,
+  while retaining sufficient target padding. */
+  margin-top: -.5rem;
+  margin-bottom: 1.25rem;
+  margin-left: -.75rem; }
+
+a.facebook,
+a.twitter {
+  color: var(--icon-color);
+  display: flex;
+  justify-content: center;
+  padding: .75rem; }
+
+a.facebook:hover,
+a.twitter:hover {
+  color: var(--icon-hover-color); }
+
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor; }
+
+.icon-alone {
+  height: 1.25em;
+  width: 1.25em; }
+
+.links__rule {
+  border-top: 1px dashed var(--dotted-rule-color);
+  margin-bottom: 1.5rem; }
+
+.product__cta {
+  display: flex;
+  justify-content: space-between; }
+
+.product__price {
+  align-self: center;
+  margin: 0;
+  /* Match baseline w/button text, which is 2px smaller. */
+  padding-top: 2px; }
