@@ -223,10 +223,18 @@ button:hover {
 
 .product {
   border-bottom: 1px solid var(--horizontal-rule-color);
-  padding: 1.5rem 0; }
+  margin-bottom: 2rem;
+  padding: 1.5rem 0 3.5rem; }
+
+.product:last-child {
+  border-bottom: none; }
 
 .product__origin.h5 {
   margin-top: 0; }
+
+.product__name {
+  /* Match mockup  spacing. */
+  margin-top: 2px; }
 
 .product__image-wrap img {
   display: block;
