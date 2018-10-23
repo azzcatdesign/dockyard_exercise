@@ -1,5 +1,7 @@
 @charset "UTF-8";
+/* ----------------------------------- */
 /* Minimal reset */
+/* ----------------------------------- */
 html {
   box-sizing: border-box;
   font-size: 16px; }
@@ -24,28 +26,18 @@ img {
   max-width: 100%;
   height: auto; }
 
+/* ----------------------------------- */
 /* Font Face Declarations */
+/* ----------------------------------- */
 @font-face {
   font-family: "system";
   font-style: normal;
   font-weight: 400;
   src: local(".SFNSText-Regular"), local(".HelveticaNeueDeskInterface-Regular"), local(".LucidaGrandeUI"), local("Segoe UI"), local("Ubuntu"), local("Roboto-Regular"), local("DroidSans"), local("Tahoma"); }
 
-/* @font-face {
-  font-family: "Cormorant Garamond";
-  src: url("fonts/CormorantGaramond-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Proza Libre";
-  src: url("fonts/ProzaLibre-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-}
-*/
+/* ----------------------------------- */
 /* Variables */
+/* ----------------------------------- */
 :root {
   /* Color Variables */
   /* neutrals, light to dark */
@@ -91,7 +83,9 @@ img {
   --body-font: var(--sans-serif);
   --head-font: var(--serif); }
 
+/* ----------------------------------- */
 /* Typography */
+/* ----------------------------------- */
 /* Scale derived, using custom value of 1.225. http://type-scale.com/?size=16&scale=1.225&text=A%20Visual%20Type%20Scale&webfont=Cormorant%20Garamond&font-family=font-family:%20%27Cormorant%20Garamond%27,%20serif;&font-weight=300&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=#333*/
 /* Scale derived, using custom value of 1.37. See:  http://type-scale.com/?size=16&scale=1.37&text=Ikoflex%20Camera&webfont=Cormorant%20Garamond&font-family=font-family:%20%27Cormorant%20Garamond%27,%20serif;&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=#333 */
 body {
@@ -176,7 +170,9 @@ a:hover {
   background: var(--primary-color);
   color: var(--white); }
 
+/* ----------------------------------- */
 /* Components */
+/* ----------------------------------- */
 button {
   background-color: var(--button-background-color);
   border: none;
@@ -196,29 +192,57 @@ button:hover {
   background-color: var(--button-hover-background-color);
   color: var(--white); }
 
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor; }
+
+.icon-alone {
+  height: 1.25em;
+  width: 1.25em; }
+
+.facebook,
+.twitter {
+  color: var(--icon-color);
+  display: flex;
+  justify-content: center;
+  padding: .75rem; }
+
+.facebook:hover,
+.twitter:hover {
+  color: var(--icon-hover-color); }
+
+/* ----------------------------------- */
 /* General */
+/* ----------------------------------- */
 * {
   scroll-behavior: smooth;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1); }
 
+/* ----------------------------------- */
 /* Layout */
-/* This fixes the space at top of body */
+/* ----------------------------------- */
+/* This fixes the space at top of body from svg symbols. */
 .visually-hidden {
   display: none; }
 
-#container {
+body > .container {
   background-color: var(--main-background-color);
   border: 0.5rem solid var(--white);
   padding: 1rem; }
 
 @media (min-width: 1024px) {
-  #container {
+  body > .container {
     border-width: 1.125rem; } }
 
 .page-header {
   max-width: 1100px;
   margin: 0 auto;
   padding: 1rem 0 2rem; }
+
+@media (min-width: 1024px) {
+  .page-header {
+    padding-bottom: 1.5rem; } }
 
 .store-logo {
   background: transparent url(images/market-logo.svg) no-repeat center center;
@@ -227,17 +251,21 @@ button:hover {
   height: 1.125rem;
   text-indent: -9999px; }
 
-@media (min-width: 1024px) {
+@media (min-width: 860px) {
   .store-logo {
     background-position: left center;
     height: 1.5rem; } }
 
 .product {
   border-bottom: 1px solid var(--horizontal-rule-color);
-  margin: 0 auto;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
   max-width: 1100px;
   padding: 1.5rem 0 3.5rem; }
+
+@media (min-width: 1024px) {
+  .product {
+    padding-top: 2.5rem;
+    padding-bottom: 4.5rem; } }
 
 .product:last-child {
   border-bottom: none; }
@@ -251,19 +279,34 @@ button:hover {
 
 @media (min-width: 1024px) {
   .product__name {
-    /* margin-bottom: .425em; */
+    /* Close but no touch ascenders & descenders. */
+    line-height: 1.1;
+    margin-bottom: 0; } }
+
+.product__image-wrap {
+  margin-bottom: 2rem; }
+
+@media (min-width: 860px) {
+  .product__image-wrap {
     margin-bottom: 0; } }
 
 .product__image-wrap img {
-  display: block;
-  margin-bottom: 2rem; }
+  display: block; }
 
 @media (min-width: 860px) {
   .links {
     display: flex;
     justify-content: space-between; } }
 
-a.more:after {
+.product__footer {
+  border-bottom: 1px dashed var(--dotted-rule-color);
+  margin-bottom: 1.5rem; }
+
+@media (min-width: 1024px) {
+  .product__footer {
+    margin-bottom: 2.25rem; } }
+
+.more:after {
   content: '→';
   display: inline-block;
   margin-left: .5em; }
@@ -279,30 +322,6 @@ a.more:after {
   margin-bottom: 1.25rem;
   margin-left: -.75rem; }
 
-a.facebook,
-a.twitter {
-  color: var(--icon-color);
-  display: flex;
-  justify-content: center;
-  padding: .75rem; }
-
-a.facebook:hover,
-a.twitter:hover {
-  color: var(--icon-hover-color); }
-
-.icon {
-  width: 1em;
-  height: 1em;
-  fill: currentColor; }
-
-.icon-alone {
-  height: 1.25em;
-  width: 1.25em; }
-
-.links__rule {
-  border-top: 1px dashed var(--dotted-rule-color);
-  margin-bottom: 1.5rem; }
-
 @media (min-width: 1024px) {
   .links__rule {
     margin-bottom: 2.25rem; } }
@@ -317,7 +336,9 @@ a.twitter:hover {
   /* Match baseline w/button text, which is 2px smaller. */
   padding-top: 2px; }
 
-/* Grid rules kick in at 1024px; */
+/* ----------------------------------- */
+/* Grid rules kick in at 860px; */
+/* ----------------------------------- */
 .product__header {
   grid-area: header; }
 
@@ -330,11 +351,8 @@ a.twitter:hover {
 @media (min-width: 860px) {
   .grid {
     display: grid;
-    grid-gap: 0 2.5rem;
-    grid-template-rows: 5.5rem auto;
+    grid-gap: 1.5rem 2.5rem;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "image image image header header" "image image image description description"; } }
-
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-rows: 7.125rem auto; } }
+    grid-template-rows: min-content 1fr;
+    grid-template-areas: "image image image header header" "image image image description description";
+    place-items: start; } }

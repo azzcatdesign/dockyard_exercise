@@ -1,15 +1,12 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
   <title>Code Challenge</title>
   <meta name="author" content="Catherine Azzarello">
   <meta name="description" content="DockYard UX Developer exercise">
   <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Proza+Libre:400,600" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
@@ -28,95 +25,99 @@
     </symbol>
   </svg>
 
-  <div id="container">
+  <div class="container">
 
     <header id="page-header" class="page-header">
       <div class="store-logo">Market</div>
     </header>
 
-    <div class="product grid">
-      <header class="product__header grid-item">
-        <h2 class="product__origin h5">1956 Germany</h2>
-        <h1 class="product__name">Ikoflex Camera</h1>
-      </header>
-      <div class="product__image-wrap grid-item">
-        <img src="images/ikoflex.jpg" alt="front view of Ikoflex camera" />
-      </div>
-      <div class="product__description-wrap grid-item">
-        <p>The waist-level viewing hood opens and closes in a single action. The image from the taking lens is reflected by a mirror onto a ground glass screen. This model has a foldable magnifying-glass under the hood, and an eye-level sportsfinder.</p>
-        <footer>
-          <div class="links">
-            <p class="more">
-              <a class="more" href="/">Learn More</a>
-            </p>
-            <ul class="social-links">
-              <li class="social-links__list-item">
-                <a class="facebook" href="/">
-                  <svg class="icon icon-alone">
-                    <use xlink:href="#icon-facebook" />
-                  </svg>
-                </a>
-              </li>
-              <li class="social-links__list-item">
-                <a class="twitter" href="/">
-                  <svg class="icon icon-alone">
-                    <use xlink:href="#icon-twitter" />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <hr class="links__rule">
+    <section id="products" class="products">
+      <div class="product grid">
+        <header class="product__header grid-item">
+          <h2 class="product__origin h5">1956 Germany</h2>
+          <h1 class="product__name">Ikoflex Camera</h1>
+        </header>
+        <div class="product__image-wrap grid-item">
+          <img src="images/ikoflex.jpg" alt="front view of Ikoflex camera" />
+        </div>
+        <div class="product__description-wrap grid-item">
+          <p>The waist-level viewing hood opens and closes in a single action. The image from the taking lens is reflected by a mirror onto a ground glass screen. This model has a foldable magnifying-glass under the hood, and an eye-level sportsfinder.</p>
+          <footer class="product__footer">
+            <div class="links">
+              <p>
+                <a class="more" href="/">Learn More</a>
+              </p>
+              <ul class="social-links">
+                <li class="social-links__list-item">
+                  <a class="facebook" href="/">
+                    <svg class="icon icon-alone">
+                      <use xlink:href="#icon-facebook" />
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links__list-item">
+                  <a class="twitter" href="/">
+                    <svg class="icon icon-alone">
+                      <use xlink:href="#icon-twitter" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </footer>
           <div class="product__cta">
             <p class="product__price">$165</p>
             <button class="button button--primary">Add to Cart</button>
           </div>
-        </footer>
-      </div>
-    </div><!-- /product-->
+        </div>
+      </div><!-- /.product-->
 
-    <div class="product grid">
-      <header class="product__header grid-item">
-        <h2 class="product__origin h5">1920 United States</h2>
-        <h1 class="product__name">Singer 27</h1>
-      </header>
-      <div class="product__image-wrap grid-item">
-        <img src="images/singer.jpg" alt="3/4 front view of antique sewing machine" />
-      </div>
-      <div class="product__description-wrap grid-item">
-        <p>The 27 series was singer's first use of a vibrating shuttle as a bobbin driver, instead of the transverse shuttle used in the older 	&lsquo;New Family' machine.</p>
-        <footer>
-          <div class="links">
-            <p class="more">
-              <a class="more" href="/">Learn More</a>
-            </p>
-            <ul class="social-links">
-              <li class="social-links__list-item">
-                <a class="facebook" href="/">
-                  <svg class="icon icon-alone">
-                    <use xlink:href="#icon-facebook" />
-                  </svg>
-                </a>
-              </li>
-              <li class="social-links__list-item">
-                <a class="twitter" href="/">
-                  <svg class="icon icon-alone">
-                    <use xlink:href="#icon-twitter" />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <hr class="links__rule">
+      <div class="product grid">
+        <header class="product__header grid-item">
+          <h2 class="product__origin h5">1920 United States</h2>
+          <h1 class="product__name">Singer 27</h1>
+        </header>
+        <div class="product__image-wrap grid-item">
+          <img src="images/singer.jpg" alt="3/4 front view of antique sewing machine" />
+        </div>
+        <div class="product__description-wrap grid-item">
+          <p>The 27 series was singer's first use of a vibrating shuttle as a bobbin driver, instead of the transverse shuttle used in the older 	&lsquo;New Family' machine.</p>
+          <footer class="product__footer">
+            <div class="links">
+              <p>
+                <a class="more" href="/">Learn More</a>
+              </p>
+              <ul class="social-links">
+                <li class="social-links__list-item">
+                  <a class="facebook" href="/">
+                    <svg class="icon icon-alone">
+                      <use xlink:href="#icon-facebook" />
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links__list-item">
+                  <a class="twitter" href="/">
+                    <svg class="icon icon-alone">
+                      <use xlink:href="#icon-twitter" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </footer>
           <div class="product__cta">
             <p class="product__price">$250</p>
             <button class="button button--primary">Add to Cart</button>
           </div>
-        </footer>
-      </div>
-    </div><!-- /product-->
+        </div>
+      </div><!-- /.product-->
 
-  </div>
+    </section><!-- /#products -->
+  </div><!-- /.container -->
+
+  <footer id="page-footer" class="page-footer">
+    <!-- All the footer stuff. -->
+  </footer><!-- /.container -->
   <!-- <script src="js/scripts.js"></script> -->
 </body>
 </html>
