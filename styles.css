@@ -216,6 +216,8 @@ button:hover {
     border-width: 1.125rem; } }
 
 .page-header {
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 1rem 0 2rem; }
 
 .store-logo {
@@ -224,6 +226,11 @@ button:hover {
   display: block;
   height: 1.125rem;
   text-indent: -9999px; }
+
+@media (min-width: 1024px) {
+  .store-logo {
+    background-position: left center;
+    height: 1.5rem; } }
 
 .product {
   border-bottom: 1px solid var(--horizontal-rule-color);
@@ -251,7 +258,7 @@ button:hover {
   display: block;
   margin-bottom: 2rem; }
 
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   .links {
     display: flex;
     justify-content: space-between; } }
@@ -320,10 +327,14 @@ a.twitter:hover {
 .product__description-wrap {
   grid-area: description; }
 
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   .grid {
     display: grid;
     grid-gap: 0 2.5rem;
-    grid-template-rows: 7.125rem auto;
+    grid-template-rows: 5.5rem auto;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "image image image header header" "image image image description description"; } }
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-rows: 7.125rem auto; } }
