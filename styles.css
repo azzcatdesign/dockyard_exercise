@@ -56,9 +56,9 @@ img {
   --main-background-color: #EDEDE8;
   --primary-color-tint: hsla(83, 6%, 87%, 1);
   --primary-color-tint: #DADFD2;
+  /* forest-green */
   --primary-color: hsla(158, 82%, 43%, 1);
   --primary-color: #146E4D;
-  /* forest-green */
   --primary-color-shade: hsla(158, 86%, 33%, 1);
   --primary-color-shade: #146E4D;
   /* derived colors, alphabetical*/
